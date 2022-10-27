@@ -4,19 +4,17 @@ if ($_SERVER["REQUEST_METHOD"] == "GET"){
   $endereco = $_GET["endereco"];
   $sql =<<<EOF
   select * from rota where endereco = '$endereco'
-
 EOF;
   $ret = pg_query($db, $sql);
   if(!$ret) {
      http_response_code(501);
   } else {
-    echo "foi";
      http_response_code(200);
      $response["dados"] = array();
-    echo $response;
     while($row = pg_fetch_row($ret)) {
-      // $rota = array();
-      // $rota["rotaid"] = $row[0];
+      $rota = array();
+      $rota["rotaid"] = $row[0];
+      echo $row[0];
       // $rota["contrato"] = $row[1];
       // $rota["edificio"] = $row[2];
       // $rota["ordem"] = $row[3];
