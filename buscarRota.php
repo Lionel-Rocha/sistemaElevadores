@@ -10,6 +10,7 @@ EOF;
   if(!$ret) {
      http_response_code(501);
   } else {
+    echo "foi";
      http_response_code(200);
      $response["dados"] = array();
     while($row = pg_fetch_row($ret)) {
