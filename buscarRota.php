@@ -20,9 +20,8 @@ EOF;
       // $rota["endereco"] = $row[4];
       // $rota["unidade"] = $row[5];
       array_push($response["dados"], $rota);
-      echo $response;
     }
-    echo $ret;
+    echo $response;
     // echo json_encode($response);
     // header("Location: https://sistemaelevadores.herokuapp.com/rota.html");
   }
