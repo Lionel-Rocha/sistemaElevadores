@@ -7,6 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET"){
 
 EOF;
   $ret = pg_query($db, $sql);
+  echo $ret;
   if(!$ret) {
      http_response_code(501);
   } else {
