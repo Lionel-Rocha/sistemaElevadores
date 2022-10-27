@@ -11,7 +11,7 @@ EOF;
      http_response_code(501);
   } else {
      http_response_code(200);
-     $response["rota"] = array();
+     $response["amigo"] = array();
     while($row = pg_fetch_row($ret)) {
       $rota = array();
       $rota["rotaid"] = $row[0];
@@ -20,10 +20,10 @@ EOF;
       $rota["ordem"] = $row[3];
       $rota["endereco"] = $row[4];
       $rota["unidade"] = $row[5];
-      array_push($response["rota"], $rota);
+      array_push($response["amigo"], $rota);
     }
     echo json_encode($response);
-    //header("Location: https://sistemaelevadores.herokuapp.com/rota.html");
+    // header("Location: https://sistemaelevadores.herokuapp.com/rota.html");
   }
 }
 
