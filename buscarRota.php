@@ -18,7 +18,8 @@ EOF;
       $rota["contrato"] = $row[1];
       $rota["edificio"] = $row[2];
       $rota["ordem"] = $row[3];
-      $rota["unirdade"] = $row[4];
+      $rota["endereco"] = $row[4];
+      $rota["unidade"] = $row[5];
       array_push($response["rota"], $rota);
     }
     echo json_encode($response);
