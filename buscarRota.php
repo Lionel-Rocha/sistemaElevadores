@@ -11,18 +11,19 @@ EOF;
      http_response_code(501);
   } else {
      http_response_code(200);
-     $response["amigo"] = array();
+     $response["dados"] = array();
     while($row = pg_fetch_row($ret)) {
-      $rota = array();
-      $rota["rotaid"] = $row[0];
-      $rota["contrato"] = $row[1];
-      $rota["edificio"] = $row[2];
-      $rota["ordem"] = $row[3];
-      $rota["endereco"] = $row[4];
-      $rota["unidade"] = $row[5];
-      array_push($response["amigo"], $rota);
+      // $rota = array();
+      // $rota["rotaid"] = $row[0];
+      // $rota["contrato"] = $row[1];
+      // $rota["edificio"] = $row[2];
+      // $rota["ordem"] = $row[3];
+      // $rota["endereco"] = $row[4];
+      // $rota["unidade"] = $row[5];
+      // array_push($response["dados"], $rota);
     }
-    echo json_encode($response);
+    echo $ret;
+    // echo json_encode($response);
     // header("Location: https://sistemaelevadores.herokuapp.com/rota.html");
   }
 }
