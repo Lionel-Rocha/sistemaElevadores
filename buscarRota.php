@@ -3,9 +3,9 @@ include("conexao.php");
 if ($_SERVER["REQUEST_METHOD"] == "GET"){
   $endereco = $_GET["endereco"];
   $sql =<<<EOF
-  echo $endereco;
   select * from rota;
 EOF;
+  echo $endereco;
   $ret = pg_query($db, $sql);
   if(!$ret) {
      http_response_code(501);
