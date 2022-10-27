@@ -16,7 +16,7 @@ EOF;
      $js_code = 'console.log('$amigo)
   } else {
     echo $amigo;
-      // header("Location: https://sistemaelevadores.herokuapp.com/index.html");
+    header("Location:https://sistemaelevadores.herokuapp.com/criarRota.html");
   }
 }
 
