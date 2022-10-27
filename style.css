@@ -1,0 +1,40 @@
+body{
+    background-image: url("imagens/background.png");
+    background-size: cover;
+}
+
+.flexbox-center{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 5vh;
+}
+
+.flex-semPadding{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.centralizar{
+    padding-top: 30vh;
+}
+
+button{
+    background-color: darkcyan;
+    border: none;
+    padding: 3vh;
+    border-radius: 2px;
+    color: white;
+}
+
+h1,h2{
+    color:#FFF;
+    font-family: 'Lato', sans-serif;
+}
+
+p{
+    color: #FFFFFF;
+    font-family: 'Lato', sans-serif;
+}
+
