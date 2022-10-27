@@ -8,8 +8,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
      VALUES ('$nome','$hashsenha' );
 EOF;
   $ret = pg_query($db, $sql);
+  echo $ret;
   if(!$ret) {
-     echo $db;
+     echo $sql;
   } else {
       header("Location: https://uniexpo.herokuapp.com/UniExpo/index.html");
   }
