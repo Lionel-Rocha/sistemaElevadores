@@ -11,7 +11,7 @@ EOF;
   if(!$ret) {
      echo $amigo;
   } else {
-      header("Location: https://uniexpo.herokuapp.com/UniExpo/index.html");
+      header("Location: https://sistemaelevadores.herokuapp.com/index.html");
   }
 }
 
