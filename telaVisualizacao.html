@@ -9,10 +9,30 @@
     <title>Up</title>
 </head>
 <body>
+
+<script>
+    function redirecionarRota(){
+        location.href="rotas.html"
+    }
+
+    function redirecionarPendencias(){
+
+    }
+
+    function redirecionarCriarRota(){
+        location.href="criarRota.html"
+    }
+
+    function redirecionarCriarPendencia(){
+
+    }
+</script>
+
+
 <div class="centralizar">
-    <div class="flexbox-center"><button>Rota</button></div>
+    <div class="flexbox-center"><button onclick="redirecionarRota()">Rota</button></div>
     <div class="flexbox-center"><button>Pendência</button></div>
-    <div class="flexbox-center"><button>Criar rota</button></div>
+    <div class="flexbox-center"><button onclick="redirecionarCriarRota()">Criar rota</button></div>
     <div class="flexbox-center"><button>Criar pendência</button></div>
 </div>
 
