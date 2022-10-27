@@ -14,7 +14,7 @@ EOF;
   if(!$ret) {
      echo $amigo;
   } else {
-      header("Location: https://sistemaelevadores.herokuapp.com/telaVisualizacao.html");
+      header("Location: https://sistemaelevadores.herokuapp.com/criarRota.html");
   }
 }
 
