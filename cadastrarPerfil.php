@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
   $nome = $_REQUEST["username"];
   $hashsenha = md5($_REQUEST["senha"]);
   $sql =<<<EOF
-     INSERT INTO public.Pessoa (nome, email ,curso_idcurso ,hashsenha)
+     INSERT INTO public.Pessoa (username,password)
      VALUES ('$nome','$hashsenha' );
 EOF;
   $ret = pg_query($db, $sql);
