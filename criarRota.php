@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
   $endereco = $_REQUEST["endereco"];
   $unidade = $_REQUEST["unidade"];
   $sql =<<<EOF
-     INSERT INTO public.rota (contrato,edificio,ordem,endereco,unidade) VALUES ('$contrato','$edificio','$ordem','$endereco',$unidade');
+     INSERT INTO public.rota (contrato,edificio,ordem,endereco,unidade) VALUES ('$contrato','$edificio','$ordem','$endereco','$unidade');
 EOF;
   $ret = pg_query($db, $sql);
   $amigo = pg_last_error();
