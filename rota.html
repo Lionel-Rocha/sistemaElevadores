@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script>
+    var setarInfo = function(){
+        console.log("entrei no setarInfo");
+        localStorage.setItem("endereco",document.getElementById("endereco").value);
+        console.log(document.getElementById("endereco").value);
+    }
+    var pegarInfo =  function(){
+        console.log("entrei");
+        localStorage.getItem("endereco");
+        let endereco = localStorage.getItem("endereco");
+        console.log(endereco);
+        var settings = {
+            "url": "buscarRota.php?endereco=" + endereco,
+            "method": "GET",
+            "timeout": 0,
+            "processData": false,
+            "mimeType": "multipart/form-data",
+            "contentType": false,
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+            var jx = JSON.parse(response);
+            console.log(jx.rota[0].contrato);
+        });
+
+    }
+
+</script>
+<body onload="pegarInfo()">
+</body>
+</html>
