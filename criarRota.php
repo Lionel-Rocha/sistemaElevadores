@@ -13,7 +13,7 @@ EOF;
   $amigo = pg_last_error();
   echo $amigo;
   if(!$ret) {
-     echo $amigo;
+     $js_code = 'console.log('$amigo)
   } else {
     echo $amigo;
       // header("Location: https://sistemaelevadores.herokuapp.com/index.html");
