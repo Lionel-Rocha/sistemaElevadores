@@ -26,10 +26,9 @@
             "contentType": false,
         };
 
-        $.ajax(settings).done(function (response) {
-            console.log(response);
-           // var jx = JSON.parse(response);
-          //  console.log(jx.rota[0].contrato);
+         $.ajax(settings).done(function (response) {
+            var jx = JSON.parse(response);
+            console.log(jx);
         });
 
     }
