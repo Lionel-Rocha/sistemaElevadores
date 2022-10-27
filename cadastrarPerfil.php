@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 EOF;
   $ret = pg_query($db, $sql);
   if(!$ret) {
-     http_response_code(501);
+     echo "Não foi";
   } else {
       header("Location: https://uniexpo.herokuapp.com/UniExpo/index.html");
   }
