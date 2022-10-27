@@ -7,9 +7,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
      INSERT INTO public.pessoa (username,password) VALUES ('$nome','$hashsenha');
 EOF;
   $ret = pg_query($db, $sql);
-  
+  $amigo = pg_last_error();
   if(!$ret) {
-     echo "não foi";
+     echo $amigo;
   } else {
       header("Location: https://uniexpo.herokuapp.com/UniExpo/index.html");
   }
