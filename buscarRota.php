@@ -14,13 +14,13 @@ EOF;
     while($row = pg_fetch_row($ret)) {
       $rota = array();
       $rota["rotaid"] = $row[0];
-      echo $row[0];
       // $rota["contrato"] = $row[1];
       // $rota["edificio"] = $row[2];
       // $rota["ordem"] = $row[3];
       // $rota["endereco"] = $row[4];
       // $rota["unidade"] = $row[5];
-      // array_push($response["dados"], $rota);
+      array_push($response["dados"], $rota);
+      echo $response;
     }
     echo $ret;
     // echo json_encode($response);
