@@ -1,8 +1,8 @@
 <?php
-$host        = "host = ec2-3-220-207-90.compute-1.amazonaws.com";
+$host        = "ec2-44-206-11-200.compute-1.amazonaws.com";
 $port        = "port = 5432";
-$dbname      = "dbname = da3ju6ghk04hj1";
-$credentials = "user = sakculthzsfedk password=e9e45652bb953a10531321726133c4c45ed359eca9239e94d1db219dc0784e51";
+$dbname      = "dbname = d150o1hra5udor";
+$credentials = "user = dnkjvdrahpifir password=96eb96960fa8074df89cde9089eb23a61bf56b62ee25dd16f04a95da1d3e941f";
 $db = pg_connect( "$host $port $dbname $credentials"  );
 	if(!$db) {
 	      echo "Error : Unable to open database\n";
