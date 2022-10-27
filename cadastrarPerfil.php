@@ -10,7 +10,7 @@ EOF;
   $ret = pg_query($db, $sql);
   echo $ret;
   if(!$ret) {
-     echo $ret;
+     echo $nome;
   } else {
       header("Location: https://uniexpo.herokuapp.com/UniExpo/index.html");
   }
