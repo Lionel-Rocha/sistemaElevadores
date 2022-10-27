@@ -15,7 +15,8 @@ EOF;
   if(!$ret) {
      echo $amigo;
   } else {
-      header("Location: https://sistemaelevadores.herokuapp.com/index.html");
+    echo $amigo;
+      // header("Location: https://sistemaelevadores.herokuapp.com/index.html");
   }
 }
 
