@@ -13,6 +13,7 @@ EOF;
     echo "foi";
      http_response_code(200);
      $response["dados"] = array();
+    echo $response;
     while($row = pg_fetch_row($ret)) {
       // $rota = array();
       // $rota["rotaid"] = $row[0];
