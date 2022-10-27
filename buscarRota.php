@@ -3,7 +3,7 @@ include("conexao.php");
 if ($_SERVER["REQUEST_METHOD"] == "GET"){
   $endereco = $_GET["endereco"];
   $sql =<<<EOF
-  select * from rota where endereco = '$endereco';
+  select * from rota;
 EOF;
   //echo $endereco;
   $ret = pg_query($db, $sql);
@@ -22,7 +22,7 @@ EOF;
       $rota["unidade"] = $row[5];
       array_push($response["dados"], $rota);
     }
-    echo json_encode($response);
+    echo '$endereco';
     // echo json_encode($response);
     // header("Location: https://sistemaelevadores.herokuapp.com/rota.html");
   }
