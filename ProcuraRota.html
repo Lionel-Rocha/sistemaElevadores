@@ -9,6 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
 
     <script>
+        
+        var setarInfo = function(){
+        console.log("entrei no setarInfo");
+        localStorage.setItem("endereco",document.getElementById("endereco").value);
+        console.log(document.getElementById("endereco").value);
+    }
+        
         function pegarRota(){
             let endereco = localStorage.getItem("endereco");
             var settings = {
