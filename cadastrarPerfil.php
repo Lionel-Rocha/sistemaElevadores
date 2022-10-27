@@ -4,8 +4,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
   $nome = $_REQUEST["nome"];
   $hashsenha = md5($_REQUEST["senha"]);
   $sql =<<<EOF
-     INSERT INTO public.pessoa (nome, created_on, hashsenha)
-     VALUES ('$nome', now(), '$hashsenha' );
+     INSERT INTO public.pessoa (nome, hashsenha)
+     VALUES ('$nome','$hashsenha' );
 EOF;
   $ret = pg_query($db, $sql);
   if(!$ret) {
