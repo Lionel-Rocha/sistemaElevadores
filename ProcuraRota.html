@@ -9,23 +9,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
 
     <script>
-        function pegarRota(){
-            let endereco = localStorage.getItem("endereco");
-            var settings = {
-                "url": "buscarRota.php?endereco=" + endereco,
-                "method": "GET",
-                "timeout": 0,
-                "processData": false,
-                "mimeType": "multipart/form-data",
-                "contentType": false,
-            };
-
-            $.ajax(settings).done(function (response) {
-                var jx = JSON.parse(response);
-                console.log(jx);
-
-            });
+        var setarInfo = function(){
+            console.log("entrei no setarInfo");
+            localStorage.setItem("endereco",document.getElementById("endereco").value);
+            console.log(document.getElementById("endereco").value);
         }
+
+
+        // function pegarRota(){
+        //     let endereco = localStorage.getItem("endereco");
+        //     var settings = {
+        //         "url": "buscarRota.php?endereco=" + endereco,
+        //         "method": "GET",
+        //         "timeout": 0,
+        //         "processData": false,
+        //         "mimeType": "multipart/form-data",
+        //         "contentType": false,
+        //     };
+        //
+        //     $.ajax(settings).done(function (response) {
+        //         var jx = JSON.parse(response);
+        //         console.log(jx);
+        //
+        //     });
+        // }
 
 
     </script>
@@ -33,7 +40,7 @@
 
 
 </head>
-<body onload="pegarRota()">
+<body>
 <form action="buscarRota.php">
     <div class="centralizar">
         <div class="flex-semPadding"><label for="endereco"><p><b>Endereço</b></p></label></div>
