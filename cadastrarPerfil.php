@@ -11,7 +11,6 @@ EOF;
   if(!$ret) {
      http_response_code(501);
   } else {
-     http_response_code(200);
       header("Location: https://uniexpo.herokuapp.com/UniExpo/index.html");
   }
 }
