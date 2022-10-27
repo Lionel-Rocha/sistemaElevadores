@@ -23,7 +23,7 @@ EOF;
       array_push($response["rota"], $rota);
     }
     echo json_encode($response);
-    header("Location: https://sistemaelevadores.herokuapp.com/rota.html");
+    //header("Location: https://sistemaelevadores.herokuapp.com/rota.html");
   }
 }
 
