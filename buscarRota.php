@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET"){
   $endereco = $_GET["endereco"];
   $sql =<<<EOF
   select * from rota where endereco = '$endereco'
-  
+
 EOF;
   $ret = pg_query($db, $sql);
   if(!$ret) {

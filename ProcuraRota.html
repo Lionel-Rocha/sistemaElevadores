@@ -9,13 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
 
     <script>
-        
-        var setarInfo = function(){
-        console.log("entrei no setarInfo");
-        localStorage.setItem("endereco",document.getElementById("endereco").value);
-        console.log(document.getElementById("endereco").value);
-    }
-        
         function pegarRota(){
             let endereco = localStorage.getItem("endereco");
             var settings = {
@@ -46,7 +39,7 @@
         <div class="flex-semPadding"><label for="endereco"><p><b>Endereço</b></p></label></div>
         <div class="flex-semPadding"><input type="text" placeholder="Digite o endereço" name="endereco" id="endereco" required></div>
     </div>
-    <button type="submit">Procurar</button>
+    <button type="submit" onclick="setarInfo()">Procurar</button>
 
 </form>
 </body>
