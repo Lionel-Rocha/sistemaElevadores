@@ -11,12 +11,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 EOF;
   $ret = pg_query($db, $sql);
   $amigo = pg_last_error();
-  echo $amigo;
   if(!$ret) {
-     $js_code = 'console.log('$amigo)
+     echo $amigo;
   } else {
-    echo $amigo;
-    header("Location:https://sistemaelevadores.herokuapp.com/criarRota.html");
+      header("Location: https://sistemaelevadores.herokuapp.com/criarRota.html");
   }
 }
 
