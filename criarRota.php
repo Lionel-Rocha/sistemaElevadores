@@ -11,6 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 EOF;
   $ret = pg_query($db, $sql);
   $amigo = pg_last_error();
+  echo $amigo;
   if(!$ret) {
      echo $amigo;
   } else {
