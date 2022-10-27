@@ -3,7 +3,7 @@ include("conexao.php");
 if ($_SERVER["REQUEST_METHOD"] == "GET"){
   $endereco = $_GET["endereco"];
   $sql =<<<EOF
-  select * from rota where endereco = '$endereco';
+  select * from rota where endereco = $endereco;
 EOF;
   //echo $endereco;
   $ret = pg_query($db, $sql);
