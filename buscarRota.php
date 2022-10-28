@@ -23,8 +23,9 @@ EOF;
       $rota["unidade"] = $row[5];
       array_push($response["dados"], $rota);
     }
-
+    print_r($response);
     setcookie($response);
+
 
   }
 }
