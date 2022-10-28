@@ -25,6 +25,15 @@ EOF;
 
 
     }
+    echo "<table>"
+    echo "<tr>"
+    echo"<th>"
+    echo "Company"
+    echo "</th>"
+    echo "</tr>"
+    echo "</table>"
+
+
     echo "ID";
     echo "\n";
     echo $rota["rotaid"];
