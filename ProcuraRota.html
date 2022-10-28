@@ -9,7 +9,45 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
 
-    <?php
+    <script>
+        var setarInfo = function(){
+            console.log("entrei no setarInfo");
+            localStorage.setItem("endereco",document.getElementById("endereco").value);
+            pegarRota();
+        }
+
+
+
+
+        function pegarRota(){
+            let endereco = localStorage.getItem("endereco");
+            console.log(endereco);
+            var settings = {
+                "method": "GET",
+                "timeout": 0,
+                "processData": false,
+                "mimeType": "multipart/form-data",
+                "contentType": false,
+            };
+
+            $.ajax(settings).done(
+                function (response) {
+                console.log(response);
+                var jx = JSON.parse(response);
+                console.log(jx);
+
+
+            });
+        }
+
+
+    </script>
+
+
+
+</head>
+<body>
+<?php
 include("conexao.php");
 if ($_SERVER["REQUEST_METHOD"] == "GET"){
   $endereco = $_GET["endereco"];
@@ -40,47 +78,6 @@ EOF;
 }
 
 ?>
-
-
-    <script>
-        var setarInfo = function(){
-            console.log("entrei no setarInfo");
-            localStorage.setItem("endereco",document.getElementById("endereco").value);
-            pegarRota();
-        }
-
-
-
-
-        function pegarRota(){
-            let endereco = localStorage.getItem("endereco");
-            console.log(endereco);
-            var settings = {
-                "url": "https://sistemaelevadores.herokuapp.com/buscarRota.php?endereco=" + endereco,
-                "method": "GET",
-                "timeout": 0,
-                "processData": false,
-                "mimeType": "multipart/form-data",
-                "contentType": false,
-            };
-
-            $.ajax(settings).done(
-                function (response) {
-                console.log(response);
-                var jx = JSON.parse(response);
-                console.log(jx);
-
-
-            });
-        }
-
-
-    </script>
-
-
-
-</head>
-<body>
 <form action="buscarRota.php">
     <div class="centralizar">
         <div class="flex-semPadding"><label for="endereco"><p><b>Endereço</b></p></label></div>
