@@ -9,6 +9,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
 
+    <?php
+include("conexao.php");
+if ($_SERVER["REQUEST_METHOD"] == "GET"){
+  $endereco = $_GET["endereco"];
+  $sql =<<<EOF
+  select * from rota;
+EOF;
+  $ret = pg_query($db, $sql);
+  $amigo = pg_last_error();
+  // echo $amigo;
+  if(!$ret) {
+     http_response_code(501);
+  } else {
+     http_response_code(200);
+     $response["dados"] = array();
+    while($row = pg_fetch_row($ret)) {
+      $rota = array();
+      $rota["rotaid"] = $row[0];
+      $rota["contrato"] = $row[1];
+      $rota["edificio"] = $row[2];
+      $rota["ordem"] = $row[3];
+      $rota["endereco"] = $row[4];
+      $rota["unidade"] = $row[5];
+      array_push($response["dados"], $rota);
+    }
+
+
+  }
+}
+
+?>
+
 
     <script>
         var setarInfo = function(){
@@ -55,7 +87,7 @@
         <div class="flex-semPadding"><input type="text" placeholder="Digite o endereço" name="endereco" id="endereco" required></div>
     </div>
     <button type="submit" onclick="setarInfo()">Procurar</button>
-    <
+    <span> <? php echo $response ?></span>
 </form>
 </body>
 </html>
