@@ -1,9 +1,9 @@
 <?php
 include("conexao.php");
 if ($_SERVER["REQUEST_METHOD"] == "GET"){
-  $endereco = $_GET["endereco"];
+  $unidade = $_GET["unidade"];
   $sql =<<<EOF
-  select * from rota;
+  select * from rota where unidade = '$unidade';
 EOF;
   $ret = pg_query($db, $sql);
   $amigo = pg_last_error();
