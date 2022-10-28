@@ -16,16 +16,26 @@
             pegarRota();
         }
 
-        function pegarRota(){
-            let unidade = localStorage.getItem("unidade");
-            var settings = {
-                "url":"https://sistemaelevadores.herokuapp.com/buscarRota.php?unidade="+unidade,
-                "method": "GET",
-                "timeout": 0,
-                "processData": false,
-                "mimeType": "multipart/form-data",
-                "contentType": false,
-            };
+            function pegarRota() {
+                let unidade = localStorage.getItem("unidade");
+                $.ajax({
+                    type: "GET",
+                    url: "https://sistemaelevadores.herokuapp.com/buscarRota.php?unidade= " + unidade,
+                    data: $(this).serialize(),
+                    success: function (response) {
+                        var jsonData = JSON.parse(response);
+                        console.log(jsonData)
+                    }
+                });
+            }
+            // var settings = {
+            //     "url":"https://sistemaelevadores.herokuapp.com/buscarRota.php?unidade="+unidade,
+            //     "method": "GET",
+            //     "timeout": 0,
+            //     "processData": false,
+            //     "mimeType": "multipart/form-data",
+            //     "contentType": false,
+            // };
 
             // $.ajax(settings).done(
             //     function (response) {
@@ -36,13 +46,13 @@
             //
             // });
 
-            $.ajax({
-                url: "https://sistemaelevadores.herokuapp.com/buscarRota.php?unidade= "+unidade,
-                success: function(result){
-                    console.log(result);
-                }
-            });
-        }
+        //     $.ajax({
+        //         url: "https://sistemaelevadores.herokuapp.com/buscarRota.php?unidade= "+unidade,
+        //         success: function(result){
+        //             console.log(result);
+        //         }
+        //     });
+        // }
 
 
 
