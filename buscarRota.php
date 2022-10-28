@@ -24,6 +24,7 @@ EOF;
       array_push($response["dados"], $rota);
     }
     json_encode($response);
+    header('Location: https://sistemaelevadores.herokuapp.com/rota.html');
 
 
   }
