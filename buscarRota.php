@@ -23,7 +23,7 @@ EOF;
       $rota["unidade"] = $row[5];
       array_push($response["dados"], $rota);
     }
-    header($response);
+    json_encode($response);
 
 
   }
