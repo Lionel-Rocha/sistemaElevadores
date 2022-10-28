@@ -3,7 +3,7 @@ include("conexao.php");
 if ($_SERVER["REQUEST_METHOD"] == "GET"){
   $endereco = $_GET["endereco"];
   $sql =<<<EOF
-  select * from rota where unidade = 'EP438';
+  select * from rota;
 EOF;
   $ret = pg_query($db, $sql);
   $amigo = pg_last_error();
@@ -26,7 +26,13 @@ EOF;
 
     }
     // echo json_encode($response);
+    printf($rota["rotaid"]);
+    printf($rota["contrato"]);
+    printf($rota["edificio"]);
+    printf($rota["ordem"]);
+    printf($rota["endereco"]);
     printf($rota["unidade"]);
+
 
 
 
