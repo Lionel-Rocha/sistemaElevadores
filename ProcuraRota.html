@@ -62,8 +62,7 @@ EOF;
                 "mimeType": "multipart/form-data",
                 "contentType": false,
             };
-            var x = <?php "$response"?>
-            console.log(x);
+            
 
 
             //
@@ -89,7 +88,7 @@ EOF;
         <div class="flex-semPadding"><input type="text" placeholder="Digite o endereço" name="endereco" id="endereco" required></div>
     </div>
     <button type="submit" onclick="setarInfo()">Procurar</button>
-
+<span><?php echo $response ?></span>
 </form>
 </body>
 </html>

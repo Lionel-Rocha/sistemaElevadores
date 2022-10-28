@@ -24,7 +24,7 @@ EOF;
       array_push($response["dados"], $rota);
     }
 
-    echo json_encode($response);
+    setcookie($response);
 
   }
 }
