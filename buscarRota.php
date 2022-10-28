@@ -25,7 +25,7 @@ EOF;
 
 
     }
-    echo $rota["contrato"];
+    print_r($rota);
     // echo json_encode($response);
 
 
