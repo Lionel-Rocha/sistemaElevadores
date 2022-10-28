@@ -7,11 +7,11 @@
 </head>
 
 <script>
-    let endereco = localStorage.getItem("endereco");
+    let unidade = localStorage.getItem("unidade");
 
     function pegarInfo(){
         var settings = {
-            "url": "https://sistemaelevadores.herokuapp.com/buscarRota.php?endereco=" + endereco,
+            "url": "https://sistemaelevadores.herokuapp.com/buscarRota.php?unidade=" + unidade,
             "method": "GET",
             "timeout": 0,
             "processData": false,
