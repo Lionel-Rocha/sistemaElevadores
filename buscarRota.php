@@ -22,10 +22,10 @@ EOF;
       $rota["endereco"] = $row[4];
       $rota["unidade"] = $row[5];
       array_push($response["dados"], $rota);
-      echo $rota["rotaid"];
-      
+
+
     }
-    // echo json_encode($response);
+    echo json_encode($response);
 
 
 
