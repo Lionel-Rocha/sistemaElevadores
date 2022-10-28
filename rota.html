@@ -8,18 +8,22 @@
 
 <script>
     let endereco = localStorage.getItem("endereco");
-    var settings = {
-        "url": "https://sistemaelevadores.herokuapp.com/buscarRota.php?endereco=" + endereco,
-        "method": "GET",
-        "timeout": 0,
-        "processData": false,
-        "mimeType": "multipart/form-data",
-        "contentType": false,
-    };
 
-    $.ajax(settings).done(function (response) {
-        document.getElementById("mudavel").innerHTML = response;
-    });
+    function pegarInfo(){
+        var settings = {
+            "url": "https://sistemaelevadores.herokuapp.com/buscarRota.php?endereco=" + endereco,
+            "method": "GET",
+            "timeout": 0,
+            "processData": false,
+            "mimeType": "multipart/form-data",
+            "contentType": false,
+        };
+
+        $.ajax(settings).done(function (response) {
+            document.getElementById("mudavel").innerHTML = response;
+        });
+    }
+
 
 </script>
 <body onload="pegarInfo()">
