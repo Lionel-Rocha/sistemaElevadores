@@ -48,13 +48,5 @@ EOF;
 
 
     }
-    echo '<table id="time-table" border="2"><thead><tr >';
-    echo '<th style="width:40%; padding: 7px;">Course Code</th>';
-    echo '<th style="width:30%">Course Name</th>';
-    echo '<th style="width:40%">Slot</th>';
-
-       echo '<tr id=row'.$rota["rotaid"].'>';
-       echo '<th style="width:40%; padding: 15px;" >',$rota["contrato"] .'</th>';
-      
-    echo '</tbody></table>';
+    print_r($rota);
     ?>
