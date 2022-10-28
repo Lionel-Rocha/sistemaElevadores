@@ -24,7 +24,7 @@ EOF;
       array_push($response["dados"], $rota);
     }
     $amigo = json_encode($response);
-    return $amigo;
+    echo $amigo;
     // echo json_encode($response);
     //header("Location: https://sistemaelevadores.herokuapp.com/rota.html");
   }
