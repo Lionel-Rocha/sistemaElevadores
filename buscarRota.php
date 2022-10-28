@@ -21,10 +21,12 @@ EOF;
       $rota["ordem"] = $row[3];
       $rota["endereco"] = $row[4];
       $rota["unidade"] = $row[5];
-      $amigo = array_push($response["dados"], $rota);
+      array_push($response["dados"], $rota);
+
 
     }
-    echo $amigo;
+    echo $response;
+    // echo json_encode($response);
 
 
 
