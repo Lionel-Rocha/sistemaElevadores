@@ -25,7 +25,7 @@ EOF;
 
 
     }
-    echo $response;
+    echo $rota;
     // echo json_encode($response);
 
 
