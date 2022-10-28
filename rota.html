@@ -18,9 +18,7 @@
     };
 
     $.ajax(settings).done(function (response) {
-        var jx = JSON.parse(response);
-        console.log(jx);
-        document.getElementById("mudavel").innerHTML = jx;
+        document.getElementById("mudavel").innerHTML = response;
     });
 
 </script>
