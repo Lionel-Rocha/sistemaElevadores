@@ -16,13 +16,10 @@
             pegarRota();
         }
 
-
-
-
         function pegarRota(){
             let endereco = localStorage.getItem("endereco");
-            console.log(endereco);
             var settings = {
+                "url":"https://sistemaelevadores.herokuapp.com/buscarRota.php?endereco="+endereco,
                 "method": "GET",
                 "timeout": 0,
                 "processData": false,
@@ -39,6 +36,7 @@
 
             });
         }
+
 
 
     </script>
@@ -59,28 +57,4 @@
 </body>
 </html>
 
-<!--<table>
-<tr>
-<th>Id</th>
-<th>Username</th>
-<th>Password</th>
-</tr>
-<?php
-$conn = mysqli_connect("localhost", "root", "", "company");
-// Check connection
-if ($conn->connect_error) {
-die("Connection failed: " . $conn->connect_error);
-}
-$sql = "SELECT id, username, password FROM login";
-$result = $conn->query($sql);
-if ($result->num_rows > 0) {
-// output data of each row
-while($row = $result->fetch_assoc()) {
-echo "<tr><td>" . $row["id"]. "</td><td>" . $row["username"] . "</td><td>"
-. $row["password"]. "</td></tr>";
-}
-echo "</table>";
-} else { echo "0 results"; }
-$conn->close();
-?>
-</table>-->
+<!---->

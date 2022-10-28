@@ -7,23 +7,24 @@
 </head>
 
 <script>
-    var pegarInfo =  function(){
-        console.log("entrei");
-        // localStorage.getItem("endereco");
-        let endereco = localStorage.getItem("endereco");
-        console.log(endereco);
-        var settings = {
-            "url": "buscarRota.php?endereco=" + endereco,
-            "method": "GET",
-            "timeout": 0,
-            "processData": false,
-            "mimeType": "multipart/form-data",
-            "contentType": false,
-        };
-    }
+    let endereco = localStorage.getItem("endereco");
+    var settings = {
+        "url": "https://sistemaelevadores.herokuapp.com/buscarRota.php?endereco=" + endereco,
+        "method": "GET",
+        "timeout": 0,
+        "processData": false,
+        "mimeType": "multipart/form-data",
+        "contentType": false,
+    };
+
+    $.ajax(settings).done(function (response) {
+        var jx = JSON.parse(response);
+        console.log(jx);
+        document.getElementById("mudavel").innerHTML = jx;
+    });
 
 </script>
 <body onload="pegarInfo()">
-<?php echo $response ?>
+<p id="mudavel">amigo</p>
 </body>
 </html>

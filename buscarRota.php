@@ -25,7 +25,8 @@ EOF;
 
 
     }
-      echo json_encode($response);
+    echo json_encode($response);
+    header("Location: https://sistemaelevadores.herokuapp.com/rota.html");
 
 
 
