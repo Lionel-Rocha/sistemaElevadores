@@ -45,7 +45,7 @@ EOF;
 
     }
 
-    echo json_encode($response);
+   json_encode($response);
 
 
 
