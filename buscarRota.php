@@ -15,12 +15,16 @@ EOF;
      $response["dados"] = array();
     while($row = pg_fetch_row($ret)) {
       $rota = array();
-      $rota["rotaid"] = $row[0];
-      $rota["contrato"] = $row[1];
-      $rota["edificio"] = $row[2];
-      $rota["ordem"] = $row[3];
-      $rota["endereco"] = $row[4];
-      $rota["unidade"] = $row[5];
+      $rota["contrato"] = $row[0]
+      $rota["edificio"] = $row[1]
+      $rota["endereco"] = $row[3]
+      $rota["unidade"] = $row[4]
+      // $rota["rotaid"] = $row[0];
+      // $rota["contrato"] = $row[1];
+      // $rota["edificio"] = $row[2];
+      // $rota["ordem"] = $row[3];
+      // $rota["endereco"] = $row[4];
+      // $rota["unidade"] = $row[5];
       array_push($response["dados"], $rota);
       echo "ID";
       echo "\n";
