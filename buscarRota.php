@@ -3,7 +3,7 @@ include("conexao.php");
 if ($_SERVER["REQUEST_METHOD"] == "GET"){
   $unidade = $_GET["unidade"];
   $sql =<<<EOF
-  select * from rota where unidade = '$unidade';
+  select * from rota_trabalho where unidade = '$unidade';
 EOF;
   $ret = pg_query($db, $sql);
   $amigo = pg_last_error();
@@ -48,7 +48,7 @@ EOF;
       echo "<br>";
 
     }
-    
+
     // echo json_encode($response);
 
 
