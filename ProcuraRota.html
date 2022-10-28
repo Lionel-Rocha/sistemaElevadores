@@ -13,7 +13,6 @@
         var setarInfo = function(){
             console.log("entrei no setarInfo");
             localStorage.setItem("endereco",document.getElementById("endereco").value);
-            console.log(document.getElementById("endereco").value);
         }
 
 
@@ -41,13 +40,13 @@
 
 
 </head>
-<body onload="setarInfo()">
+<body>
 <form action="buscarRota.php">
     <div class="centralizar">
         <div class="flex-semPadding"><label for="endereco"><p><b>Endereço</b></p></label></div>
         <div class="flex-semPadding"><input type="text" placeholder="Digite o endereço" name="endereco" id="endereco" required></div>
     </div>
-    <button type="submit" onclick="setarInfo()">Procurar</button>
+    <button type="submit">Procurar</button>
 
 </form>
 </body>

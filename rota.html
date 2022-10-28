@@ -7,14 +7,9 @@
 </head>
 
 <script>
-    var setarInfo = function(){
-        console.log("entrei no setarInfo");
-        localStorage.setItem("endereco",document.getElementById("endereco").value);
-        console.log(document.getElementById("endereco").value);
-    }
     var pegarInfo =  function(){
         console.log("entrei");
-        localStorage.getItem("endereco");
+        // localStorage.getItem("endereco");
         let endereco = localStorage.getItem("endereco");
         console.log(endereco);
         var settings = {

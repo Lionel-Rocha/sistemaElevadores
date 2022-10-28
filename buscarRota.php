@@ -7,6 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET"){
 EOF;
   $ret = pg_query($db, $sql);
   $amigo = pg_last_error();
+  // echo $amigo;
   if(!$ret) {
      http_response_code(501);
   } else {
@@ -23,6 +24,8 @@ EOF;
       array_push($response["dados"], $rota);
     }
     echo json_encode($response);
+    // echo json_encode($response);
+    header("Location: https://sistemaelevadores.herokuapp.com/rota.html");
   }
 }
 
