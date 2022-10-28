@@ -25,7 +25,7 @@ EOF;
 
 
     }
-    echo json_last_error_msg();
+      echo json_encode($response);
 
 
 
