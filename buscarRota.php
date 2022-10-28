@@ -25,7 +25,7 @@ EOF;
 
 
     }
-    phpinfo();
+    echo json_encode($response);
 
 
 
