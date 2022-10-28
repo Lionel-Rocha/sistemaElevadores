@@ -1,60 +1,128 @@
+<?php
+include_once('conexao.php');
+$query="select * from Rota";
+$result=mysql_query($query);
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Up</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
-
-    <script>
-        var setarInfo = function(){
-            console.log("entrei no setarInfo");
-            localStorage.setItem("endereco",document.getElementById("endereco").value);
-            pegarRota();
-        }
-
-
-
-
-        function pegarRota(){
-            let endereco = localStorage.getItem("endereco");
-            console.log(endereco);
-            var settings = {
-                "method": "GET",
-                "timeout": 0,
-                "processData": false,
-                "mimeType": "multipart/form-data",
-                "contentType": false,
-            };
-
-            $.ajax(settings).done(
-                function (response) {
-                console.log(response);
-                var jx = JSON.parse(response);
-                console.log(jx);
-
-
-            });
-        }
-
-
-    </script>
-
-
-
+    <title> Fetch Data From Database </title>
 </head>
 <body>
+<table align="center" border="1px" style="width:600px; line-height:40px;">
+    <tr>
+        <th colspan="4"><h2>Student Record</h2></th>
+    </tr>
+    <th> ID </th>
+    <th> Name </th>
+    <th> Email </th>
+    <th> Country </th>
 
-<form action="buscarRota.php">
-    <div class="centralizar">
-        <div class="flex-semPadding"><label for="endereco"><p><b>Endereço</b></p></label></div>
-        <div class="flex-semPadding"><input type="text" placeholder="Digite o endereço" name="endereco" id="endereco" required></div>
-    </div>
-    <button type="submit" onclick="setarInfo()">Procurar</button>
-    <span> <? php echo $response ?></span>
-</form>
+    </tr>
+
+    <?php while($rows=mysql_fetch_assoc($result))
+		{
+		?>
+    <tr> <td><?php echo $rows['rotaid']; ?></td>
+        <td><?php echo $rows['contrato']; ?></td>
+        <td><?php echo $rows['edificio']; ?></td>
+        <td><?php echo $rows['ordem']; ?></td>
+        <td><?php echo $rows['endereco']; ?></td>
+        <td><?php echo $rows['unidade']; ?></td>
+    </tr>
+    <?php
+               }
+          ?>
+
+</table>
 </body>
 </html>
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Up</title>-->
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+<!--    <link rel="stylesheet" href="style.css">-->
+<!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
+<!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">-->
+
+<!--    <script>-->
+<!--        var setarInfo = function(){-->
+<!--            console.log("entrei no setarInfo");-->
+<!--            localStorage.setItem("endereco",document.getElementById("endereco").value);-->
+<!--            pegarRota();-->
+<!--        }-->
+
+
+
+
+<!--        function pegarRota(){-->
+<!--            let endereco = localStorage.getItem("endereco");-->
+<!--            console.log(endereco);-->
+<!--            var settings = {-->
+<!--                "method": "GET",-->
+<!--                "timeout": 0,-->
+<!--                "processData": false,-->
+<!--                "mimeType": "multipart/form-data",-->
+<!--                "contentType": false,-->
+<!--            };-->
+
+<!--            $.ajax(settings).done(-->
+<!--                function (response) {-->
+<!--                console.log(response);-->
+<!--                var jx = JSON.parse(response);-->
+<!--                console.log(jx);-->
+
+
+<!--            });-->
+<!--        }-->
+
+
+<!--    </script>-->
+
+
+
+<!--</head>-->
+<!--<body>-->
+
+<!--<form action="buscarRota.php">-->
+<!--    <div class="centralizar">-->
+<!--        <div class="flex-semPadding"><label for="endereco"><p><b>Endereço</b></p></label></div>-->
+<!--        <div class="flex-semPadding"><input type="text" placeholder="Digite o endereço" name="endereco" id="endereco" required></div>-->
+<!--    </div>-->
+<!--    <button type="submit" onclick="setarInfo()">Procurar</button>-->
+<!--    <span> <? php echo $response ?></span>-->
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->
+
+<!--&lt;!&ndash;<table>-->
+<!--<tr>-->
+<!--<th>Id</th>-->
+<!--<th>Username</th>-->
+<!--<th>Password</th>-->
+<!--</tr>-->
+<!--<?php-->
+<!--$conn = mysqli_connect("localhost", "root", "", "company");-->
+<!--// Check connection-->
+<!--if ($conn->connect_error) {-->
+<!--die("Connection failed: " . $conn->connect_error);-->
+<!--}-->
+<!--$sql = "SELECT id, username, password FROM login";-->
+<!--$result = $conn->query($sql);-->
+<!--if ($result->num_rows > 0) {-->
+<!--// output data of each row-->
+<!--while($row = $result->fetch_assoc()) {-->
+<!--echo "<tr><td>" . $row["id"]. "</td><td>" . $row["username"] . "</td><td>"-->
+<!--. $row["password"]. "</td></tr>";-->
+<!--}-->
+<!--echo "</table>";-->
+<!--} else { echo "0 results"; }-->
+<!--$conn->close();-->
+<!--?>-->
+<!--</table>&ndash;&gt;-->
