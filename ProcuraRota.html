@@ -26,16 +26,17 @@ EOF;
      $response["dados"] = array();
     while($row = pg_fetch_row($ret)) {
       $rota = array();
-      $rota["rotaid"] = $row[0];
-      $rota["contrato"] = $row[1];
-      $rota["edificio"] = $row[2];
-      $rota["ordem"] = $row[3];
-      $rota["endereco"] = $row[4];
-      $rota["unidade"] = $row[5];
+      $rotaid = $row[0];
+      $contrato = $row[1];
+      $edificio = $row[2];
+      $ordem = $row[3];
+      $endereco = $row[4];
+      $unidade = $row[5];
       array_push($response["dados"], $rota);
     }
 
-    setcookie($rota);
+    echo json_encode($response);
+    setcookie($rotaid, $contrato, $edificio, $ordem, $endereco, $unidade);
 
   }
 }
