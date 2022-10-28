@@ -23,10 +23,9 @@ EOF;
       $rota["unidade"] = $row[5];
       array_push($response["dados"], $rota);
     }
-    $amigo = json_encode($response);
-    $POST["$amigo"];
-    // echo json_encode($response);
-    //header("Location: https://sistemaelevadores.herokuapp.com/rota.html");
+
+    echo json_encode($response);
+
   }
 }
 
