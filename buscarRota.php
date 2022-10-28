@@ -45,7 +45,8 @@ EOF;
 
     }
 
-   json_encode($response);
+    json_encode($response);
+    header('Location: https://sistemaelevadores.herokuapp.com/ProcuraRota.html');
 
 
 
