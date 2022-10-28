@@ -23,7 +23,6 @@ EOF;
       array_push($response["dados"], $rota);
       echo "<br>";
       echo "Contrato";
-      echo "</p>"
       echo "\n";
       echo $rota["contrato"];
       echo "<br>";
