@@ -22,9 +22,7 @@ EOF;
       $rota["unidade"] = $row[4];
       array_push($response["dados"], $rota);
       echo "<br>";
-      echo "<p style='color:red;'>"
       echo "Contrato";
-      echo "</p>"
       echo "\n";
       echo $rota["contrato"];
       echo "<br>";
