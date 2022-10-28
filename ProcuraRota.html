@@ -16,23 +16,23 @@
         }
 
 
-        // function pegarRota(){
-        //     let endereco = localStorage.getItem("endereco");
-        //     var settings = {
-        //         "url": "buscarRota.php?endereco=" + endereco,
-        //         "method": "GET",
-        //         "timeout": 0,
-        //         "processData": false,
-        //         "mimeType": "multipart/form-data",
-        //         "contentType": false,
-        //     };
-        //
-        //     $.ajax(settings).done(function (response) {
-        //         var jx = JSON.parse(response);
-        //         console.log(jx);
-        //
-        //     });
-        // }
+        function pegarRota(){
+            let endereco = localStorage.getItem("endereco");
+            var settings = {
+                "url": "buscarRota.php?endereco=" + endereco,
+                "method": "GET",
+                "timeout": 0,
+                "processData": false,
+                "mimeType": "multipart/form-data",
+                "contentType": false,
+            };
+
+            $.ajax(settings).done(function (response) {
+                var jx = JSON.parse(response);
+                console.log(jx);
+
+            });
+        }
 
 
     </script>
@@ -47,6 +47,8 @@
         <div class="flex-semPadding"><input type="text" placeholder="Digite o endereço" name="endereco" id="endereco" required></div>
     </div>
     <button type="submit">Procurar</button>
+
+    <button onclick="pegarRota()">Sou um botão</button>
 
 </form>
 </body>
