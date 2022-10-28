@@ -27,13 +27,20 @@
                 "contentType": false,
             };
 
-            $.ajax(settings).done(
-                function (response) {
-                // console.log(response);
-                var jx = JSON.parse(response);
-                console.log(jx);
+            // $.ajax(settings).done(
+            //     function (response) {
+            //     // console.log(response);
+            //     var jx = JSON.parse(response);
+            //     console.log(jx);
+            //
+            //
+            // });
 
-
+            $.ajax({
+                url: "https://sistemaelevadores.herokuapp.com/buscarRota.php?unidade= "+unidade,
+                success: function(result){
+                    console.log(result);
+                }
             });
         }
 
@@ -52,7 +59,7 @@
         <div class="flex-semPadding"><input type="text" placeholder="Digite a unidade" name="unidade" id="unidade" required></div>
     </div>
     <button type="submit" onclick="setarInfo()">Procurar</button>
-    <span> </span>
+    <span> <? php echo $response ?></span>
 </form>
 </body>
 </html>
