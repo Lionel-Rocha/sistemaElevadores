@@ -22,34 +22,32 @@ EOF;
       $rota["endereco"] = $row[4];
       $rota["unidade"] = $row[5];
       array_push($response["dados"], $rota);
-
+      echo "ID";
+      echo "\n";
+      echo $rota["rotaid"];
+      echo "<br>";
+      echo "Contrato";
+      echo "\n";
+      echo $rota["contrato"];
+      echo "<br>";
+      echo "Edifício";
+      echo "\n";
+      echo $rota["edificio"];
+      echo "<br>";
+      echo "Unidade";
+      echo "\n";
+      echo $rota["unidade"];
+      echo "<br>";
+      echo "Ordem";
+      echo "\n";
+      echo $rota["ordem"];
+      echo "<br>";
+      echo "Endereço";
+      echo "\n";
+      echo $rota["endereco"];
+      echo "<br>";
 
     }
-    
-    echo "ID";
-    echo "\n";
-    echo $rota["rotaid"];
-    echo "<br>";
-    echo "Contrato";
-    echo "\n";
-    echo $rota["contrato"];
-    echo "<br>";
-    echo "Edifício";
-    echo "\n";
-    echo $rota["edificio"];
-    echo "<br>";
-    echo "Unidade";
-    echo "\n";
-    echo $rota["unidade"];
-    echo "<br>";
-    echo "Ordem";
-    echo "\n";
-    echo $rota["ordem"];
-    echo "<br>";
-    echo "Endereço";
-    echo "\n";
-    echo $rota["endereco"];
-    echo "<br>";
     // echo json_encode($response);
 
 
