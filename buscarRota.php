@@ -3,7 +3,7 @@ include("conexao.php");
 if ($_SERVER["REQUEST_METHOD"] == "GET"){
   $endereco = $_GET["endereco"];
   $sql =<<<EOF
-  select * from rota;
+  select * from rota where endereco = '$endereco';
 EOF;
   $ret = pg_query($db, $sql);
   $amigo = pg_last_error();
@@ -27,6 +27,10 @@ EOF;
     }
 //     echo json_encode($response);
 printf($rota["unidade"]);
+printf($rota["contrato"]);
+    printf($rota["edificio"]);
+    printf($rota["endereco"]);
+    printf($rota["ordem"]);
 
 
   }
