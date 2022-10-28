@@ -25,7 +25,10 @@ EOF;
 
 
     }
-    print_r($rota);
+    echo "ID";
+    echo $rota["rotaid"];
+    echo "<br>";
+    echo "Contrato";
     // echo json_encode($response);
 
 
