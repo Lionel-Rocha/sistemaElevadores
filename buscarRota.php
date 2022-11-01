@@ -23,7 +23,7 @@ EOF;
       array_push($response["dados"], $rota);
       echo "<table border='1'><tr>
 
-      <th>Contrato</th>
+      <th>.$rota["contrato"].</th>
 
       <th>Edifício</th>
 
@@ -33,17 +33,6 @@ EOF;
 
       </tr>
 
-      <tr>
-
-      <td> . $rota['contrato'] . </td>
-
-      <td> . $rota['edificio'] . </td>
-
-      <td> . $rota['unidade'] . </td>
-
-      <td> . $rota['ordem'] . </td>
-
-      </tr>
 
 
       </table>";
