@@ -21,11 +21,8 @@
                 $.ajax({
                     type: "GET",
                     url: "https://sistemaelevadores.herokuapp.com/buscarRota.php?unidade= " + unidade,
-                    data: $(this).serialize(),
-                    success: function (response) {
-                        var jsonData = JSON.parse(response);
-                        console.log(jsonData)
-                    }
+                }).done(function(data){
+                    console.log(data)
                 });
             }
             // var settings = {
@@ -63,7 +60,7 @@
 </head>
 <body>
 
-<form action="https://sistemaelevadores.herokuapp.com/buscarRota.php">
+<form>
     <div class="centralizar">
         <div class="flex-semPadding"><label for="unidade"><p><b>Unidade</b></p></label></div>
         <div class="flex-semPadding"><input type="text" placeholder="Digite a unidade" name="unidade" id="unidade" required></div>
