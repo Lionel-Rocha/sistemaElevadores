@@ -18,7 +18,7 @@
 
             function pegarRota() {
                 let unidade = localStorage.getItem("unidade");
-                fetch('https://sistemaelevadores.herokuapp.com/buscarRota.php?unidade= ' + unidade)
+                fetch('https://sistemaelevadores.herokuapp.com/buscarRota.php?unidade=' + unidade)
                     .then(response => response.json())
                     .then(data =>{
                         console.log(data)
