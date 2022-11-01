@@ -21,7 +21,7 @@ EOF;
       $rota["endereco"] = $row[3];
       $rota["unidade"] = $row[4];
       array_push($response["dados"], $rota);
-      echo "<tr>
+      echo "<table><tr>
 
       <th>Id</th>
 
@@ -31,7 +31,8 @@ EOF;
 
       <th>email</th>
 
-      </tr>";
+      </tr>
+      </table>";
       // echo "<br>";
       // echo "Contrato";
       // echo "\n";
