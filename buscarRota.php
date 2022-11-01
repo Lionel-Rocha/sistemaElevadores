@@ -21,7 +21,7 @@ EOF;
       $rota["endereco"] = $row[3];
       $rota["unidade"] = $row[4];
       array_push($response["dados"], $rota);
-      echo "<table style="border:1px solid black;"><tr>
+      echo "<table border='1'><tr>
 
       <th>Id</th>
 
