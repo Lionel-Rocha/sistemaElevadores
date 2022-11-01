@@ -16,43 +16,11 @@
             pegarRota();
         }
 
-            function pegarRota() {
-                let unidade = localStorage.getItem("unidade");
-                $.ajax({
-                    type: "GET",
-                    url: "https://sistemaelevadores.herokuapp.com/buscarRota.php?unidade= " + unidade,
-                    data: $(this).serialize(),
-                    success: function (response) {
-                        var jsonData = JSON.parse(response);
-                        console.log(jsonData)
-                    }
-                });
-            }
-            // var settings = {
-            //     "url":"https://sistemaelevadores.herokuapp.com/buscarRota.php?unidade="+unidade,
-            //     "method": "GET",
-            //     "timeout": 0,
-            //     "processData": false,
-            //     "mimeType": "multipart/form-data",
-            //     "contentType": false,
-            // };
+        var pegarRota = function(){
+            unidade = localStorage.getItem("unidade");
+            console.log(unidade)
+        }
 
-            // $.ajax(settings).done(
-            //     function (response) {
-            //     // console.log(response);
-            //     var jx = JSON.parse(response);
-            //     console.log(jx);
-            //
-            //
-            // });
-
-        //     $.ajax({
-        //         url: "https://sistemaelevadores.herokuapp.com/buscarRota.php?unidade= "+unidade,
-        //         success: function(result){
-        //             console.log(result);
-        //         }
-        //     });
-        // }
 
 
 
@@ -63,7 +31,7 @@
 </head>
 <body>
 
-<form action="https://sistemaelevadores.herokuapp.com/buscarRota.php">
+<form>
     <div class="centralizar">
         <div class="flex-semPadding"><label for="unidade"><p><b>Unidade</b></p></label></div>
         <div class="flex-semPadding"><input type="text" placeholder="Digite a unidade" name="unidade" id="unidade" required></div>
