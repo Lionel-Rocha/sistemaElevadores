@@ -23,10 +23,19 @@ EOF;
       array_push($response["dados"], $rota);
 
 
-      echo "<div style='display:flex'>";
+      echo "<table border='1'>";
+      echo "<tr>"
+      echo "<th>"
       echo "Contrato";
+      echo "</th>"
+      echo "</tr>"
+      echo "<tr>"
+      echo "<td>"
       echo $rota["contrato"];
-      echo "</div>";
+      echo "</td>"
+      echo "</tr>"
+
+      echo "</table>";
 
       echo "\n";
 
