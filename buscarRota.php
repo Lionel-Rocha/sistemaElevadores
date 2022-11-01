@@ -23,15 +23,31 @@ EOF;
       array_push($response["dados"], $rota);
       echo "<table border='1'><tr>
 
-      <th>Id</th>
+      <th>Contrato</th>
 
-      <th>name</th>
+      <th>Edifício</th>
 
-      <th>Mobile</th>
+      <th>Unidade</th>
 
-      <th>email</th>
+      <th>Ordem</th>
 
       </tr>
+
+
+
+      echo "<tr>";
+
+      echo "<td>" . $rota['contrato'] . "</td>";
+
+      echo "<td>" . $rota['edificio'] . "</td>";
+
+      echo "<td>" . $rota['unidade'] . "</td>";
+
+      echo "<td>" . $rota['ordem'] . "</td>";
+
+      echo "</tr>";
+
+
       </table>";
       // echo "<br>";
       // echo "Contrato";
