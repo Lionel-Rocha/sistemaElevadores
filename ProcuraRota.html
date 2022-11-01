@@ -16,11 +16,14 @@
             pegarRota();
         }
 
-        var pegarRota = function(){
-            unidade = localStorage.getItem("unidade");
-            console.log(unidade)
-        }
-
+            function pegarRota() {
+                let unidade = localStorage.getItem("unidade");
+                fetch('https://sistemaelevadores.herokuapp.com/buscarRota.php?unidade= ' + unidade)
+                    .then(response => response.json())
+                    .then(data =>{
+                        console.log(data)
+                    })
+            }
 
 
 
@@ -37,7 +40,7 @@
         <div class="flex-semPadding"><input type="text" placeholder="Digite a unidade" name="unidade" id="unidade" required></div>
     </div>
     <button type="submit" onclick="setarInfo()">Procurar</button>
-    
+
 </form>
 </body>
 </html>
