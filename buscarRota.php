@@ -33,19 +33,17 @@ EOF;
 
       </tr>
 
+      <tr>
 
+      <td> . $rota['contrato'] . </td>
 
-      echo "<tr>";
+      <td> . $rota['edificio'] . </td>
 
-      echo "<td>" . $rota['contrato'] . "</td>";
+      <td> . $rota['unidade'] . </td>
 
-      echo "<td>" . $rota['edificio'] . "</td>";
+      <td> . $rota['ordem'] . </td>
 
-      echo "<td>" . $rota['unidade'] . "</td>";
-
-      echo "<td>" . $rota['ordem'] . "</td>";
-
-      echo "</tr>";
+      </tr>
 
 
       </table>";
