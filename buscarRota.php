@@ -25,7 +25,7 @@ EOF;
 
       echo "<div style='display:flex'>";
       echo "Contrato";
-      echo "<br>"
+      echo "<p>"
       echo $rota["contrato"];
       echo "</div>";
 
