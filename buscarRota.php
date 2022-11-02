@@ -22,10 +22,12 @@ EOF;
       $rota["unidade"] = $row[4];
       array_push($response["dados"], $rota);
 
-
+      echo "<body style='background-color:blue'>"
       echo "<div style='display:flex'>";
+      echo "<p style='color:white'>"
       echo "Contrato \n";
       echo $rota["contrato"];
+      echo "</p>"
       echo "</div>";
 
       echo "<br>";
@@ -45,7 +47,7 @@ EOF;
       echo "\n";
       echo $rota["endereco"];
       echo "<br>";
-
+      echo "</body>"
     }
 
     json_encode($response);
