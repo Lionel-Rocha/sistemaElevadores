@@ -8,7 +8,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
 </head>
+
+<script>
+    function abrirMenu() {
+        document.getElementById("navbar").style.width = "250px";
+    }
+
+    function fecharMenu() {
+        document.getElementById("navbar").style.width = "0";
+    }
+
+    function redirecionarTelaVisualizacao(){
+        location.href="telaVisualizacao.html";
+    }
+
+</script>
+
 <body>
+
+<div class="menu" onclick="abrirMenu()"><div class="linepreto"></div>
+    <div class="linepreto"></div>
+    <div class="linepreto"></div>
+</div>
+
+<div id="navbar" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="fecharMenu()">&times;</a>
+    <a href="telaVisualizacao.html">Tela de visualização</a>
+</div>
+
 <form action="criarRota.php" method="post">
 
     <div class="flex-semPadding"><label for="contrato"><p><i>Contrato</i></p></label></div>
@@ -24,6 +51,7 @@
 
     <br>
     <div class="flexbox-center"><button type="submit" class="registrar">Registrar</button></div>
+
 
 </form>
 </body>

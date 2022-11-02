@@ -22,46 +22,46 @@ EOF;
       $rota["unidade"] = $row[4];
       array_push($response["dados"], $rota);
 
-      echo "<body style='background-color:#262B51'>";
-      echo "<div style='display:flex'>";
-      echo "<p style='color:white;font-family:sans-serif'>";
-      echo "Contrato \n";
-      echo $rota["contrato"];
-      echo "</p>";
-      echo "</div>";
-
-      echo "<div style='display:flex'>";
-      echo "<p style='color:white;font-family:sans-serif'>";
-      echo "Edifício \n";
-      echo $rota["edificio"];
-      echo "</p>";
-      echo "</div>";
-
-      echo "<div style='display:flex'>";
-      echo "<p style='color:white;font-family:sans-serif'>";
-      echo "Unidade \n";
-      echo $rota["unidade"];
-      echo "</p>";
-      echo "</div>";
-
-      echo "<div style='display:flex'>";
-      echo "<p style='color:white;font-family:sans-serif'>";
-      echo "Ordem \n";
-      echo $rota["ordem"];
-      echo "</p>";
-      echo "</div>";
-
-      echo "<div style='display:flex'>";
-      echo "<p style='color:white;font-family:sans-serif'>";
-      echo "Endereço \n";
-      echo $rota["endereco"];
-      echo "</p>";
-      echo "</div>";
-
-      echo "</body>";
+      // echo "<body style='background-color:#262B51'>";
+      // echo "<div style='display:flex'>";
+      // echo "<p style='color:white;font-family:sans-serif'>";
+      // echo "Contrato \n";
+      // echo $rota["contrato"];
+      // echo "</p>";
+      // echo "</div>";
+      //
+      // echo "<div style='display:flex'>";
+      // echo "<p style='color:white;font-family:sans-serif'>";
+      // echo "Edifício \n";
+      // echo $rota["edificio"];
+      // echo "</p>";
+      // echo "</div>";
+      //
+      // echo "<div style='display:flex'>";
+      // echo "<p style='color:white;font-family:sans-serif'>";
+      // echo "Unidade \n";
+      // echo $rota["unidade"];
+      // echo "</p>";
+      // echo "</div>";
+      //
+      // echo "<div style='display:flex'>";
+      // echo "<p style='color:white;font-family:sans-serif'>";
+      // echo "Ordem \n";
+      // echo $rota["ordem"];
+      // echo "</p>";
+      // echo "</div>";
+      //
+      // echo "<div style='display:flex'>";
+      // echo "<p style='color:white;font-family:sans-serif'>";
+      // echo "Endereço \n";
+      // echo $rota["endereco"];
+      // echo "</p>";
+      // echo "</div>";
+      //
+      // echo "</body>";
     }
-    echo $amigo;
-    json_encode($response);
+    // echo $amigo;
+    echo json_encode($response);
 
 
 
