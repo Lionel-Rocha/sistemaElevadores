@@ -22,31 +22,42 @@ EOF;
       $rota["unidade"] = $row[4];
       array_push($response["dados"], $rota);
 
-      echo "<body style='background-color:blue'>";
+      echo "<body style='background-color:#262B51'>";
       echo "<div style='display:flex'>";
-      echo "<p style='color:white'>";
+      echo "<p style='color:white;font-family:sans-serif'>";
       echo "Contrato \n";
       echo $rota["contrato"];
       echo "</p>";
       echo "</div>";
 
-      echo "<br>";
-      echo "Edifício";
-      echo "\n";
+      echo "<div style='display:flex'>";
+      echo "<p style='color:white;font-family:sans-serif'>";
+      echo "Edifício \n";
       echo $rota["edificio"];
-      echo "<br>";
-      echo "Unidade";
-      echo "\n";
+      echo "</p>";
+      echo "</div>";
+
+      echo "<div style='display:flex'>";
+      echo "<p style='color:white;font-family:sans-serif'>";
+      echo "Unidade \n";
       echo $rota["unidade"];
-      echo "<br>";
-      echo "Ordem";
-      echo "\n";
+      echo "</p>";
+      echo "</div>";
+
+      echo "<div style='display:flex'>";
+      echo "<p style='color:white;font-family:sans-serif'>";
+      echo "Ordem \n";
       echo $rota["ordem"];
-      echo "<br>";
-      echo "Endereço";
-      echo "\n";
+      echo "</p>";
+      echo "</div>";
+
+      echo "<div style='display:flex'>";
+      echo "<p style='color:white;font-family:sans-serif'>";
+      echo "Endereço \n";
       echo $rota["endereco"];
-      echo "<br>";
+      echo "</p>";
+      echo "</div>";
+
       echo "</body>";
     }
     echo $amigo;
